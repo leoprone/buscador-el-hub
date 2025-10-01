@@ -120,7 +120,7 @@ ol li{
 /* Estilos por defecto (modo claro) */
 body {
     background-color: rgb(193, 192, 192);
-    background-color: yellow;
+    
     overflow-x: hidden;
     font-family: monospace;
     transition: .3s linear;
@@ -2122,6 +2122,7 @@ mark{
 
 #editor{
     overflow-x: hidden;
- background-color: red;
+ 
 }
+
 
