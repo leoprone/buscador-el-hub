@@ -735,7 +735,7 @@ function descargarJSONFiltrado(formato) {
       let jsonGlobal; // Variable global para almacenar el JSON
 
 /* const fileId = '1mhLUAF-lti-SOKG9VPDgJM_ZgW0xRP-s'; */
-const fileId = '1Fwfmnz3j8oD_cHc2Qm8HFv3IBzFoFCk4';
+const fileId = '1sxVVyG0KoQI2Pv_JLDTJcALMmgashT7N';
 const url = `https://corsproxy.io/?https://drive.google.com/uc?export=download&id=${fileId}`;
 //  1z1JkR3N5oMUET-6X5HCUmj8txy3aavDAebrvpeQg5nk
 document.addEventListener("DOMContentLoaded", cargaDirectamenteCSV);
@@ -1842,4 +1842,5 @@ agregarTerminos.addEventListener("click", ()=>{
             link.download = "sinonimos.csv";
             link.click();
         }
+
 
