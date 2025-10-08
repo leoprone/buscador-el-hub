@@ -77,19 +77,19 @@ ol{
     width: 100%;
     text-align: center;
     padding: 15px;
-   
+    overflow-x: hidden;
 }
 
 
 
 ol li, .readme{
-    padding: 10px 0;
+    padding: 10px;
     font-size: .9rem;
     color: var(--azul-oscuro-color);
     margin: 15px 0;
     list-style: none;
     text-align: start;
-    
+    overflow-x: hidden;
 }
 
 .readme{
@@ -2291,3 +2291,4 @@ mark{
 #editor{
     overflow-x: hidden;
 }
+
