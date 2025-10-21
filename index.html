@@ -7,7 +7,8 @@
     <title>Buscador</title>
    
  <link rel="stylesheet" href="styles.css">
- <link rel="stylesheet" href="footer.css">
+ <!-- <link rel="stylesheet" href="styles copy.css"> -->
+ <link rel="stylesheet" href="footer.css"> 
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 
@@ -15,24 +16,8 @@
 
 
 <body id="editor">
-   <!-- <div class="header">
-    
-    
-     <h1>BUSCADOR - EL HUB</h1> 
-   </div> -->
-    <div class="header">
-    <a href="" class="logo" aria-label="Inicio">
-        <video class="video1" src="el_hub_logotipo.mp4" muted autoplay loop></video>   
-         <!--  <div class="messi-container">
-             <canvas id="canvas-name" class="canvas-name"></canvas> 
-        </div>-->
-    </a>
-     
-     <!-- <h1>BUSCADOR - EL HUB</h1>  -->
-   </div>
 
    <main>
-    <!-- <h1>BUSCADOR</h1>  -->
      <div class="contenedor-titulo-animado">
         <div class="buscador-animacion">
             <div class="b display-none">B</div>
@@ -44,8 +29,13 @@
             <div class="o display-none">O</div>
             <div class="r display-none">R</div>
         </div>
+        <div id="contenedor-lupa" class="contenedor-lupa">
+            <div class="circulo"></div>
+            <div class="mango"></div>
+        </div>
      </div>
-    <div class="readme">* Este sitio es un buscador por términos clave dentro de una lista de registros de startups pertenecientes a "El Hub Rosario innovation" (no contiene datos sensibles, solo los ya publicados en el sitio web de cada empresa o en su perfil de LinkedIn)
+  
+    <div class="readme">* Este sitio es un buscador por términos clave dentro de una lista de registros de startups biotecnológicas (no contiene datos sensibles, solo los ya publicados en el sitio web de cada startup o en su perfil de LinkedIn)
 </div>
    <div class="instrucciones">
     <h2>Instrucciones de uso</h2>
@@ -54,8 +44,8 @@
         <li>2. Clic en "Fijar campos"</li>
         <li>3. Ingresar términos de búsqueda en el buscador</li>
         <li>4. Para ver detalles de un registro, clic en <button disabled class="ver-mas ver-mas-instrucciones">Ver más</button></li>
-        <li>5. Para exportar el resultado de la búsqueda en formato .csv o .json: clic en <button disabled class="guardar btn-instrucciones">Guardar Resultado como .csv</button> o en  <button disabled  class="guardar btn-instrucciones">Guardar Resultado como .json</button>, respectivamente (permite elegir cuáles campos guardar) </li>
-
+       <!--  <li>5. Para exportar el resultado de la búsqueda en formato .csv o .json: clic en <button disabled class="guardar btn-instrucciones">Guardar Resultado como .csv</button> o en  <button disabled  class="guardar btn-instrucciones">Guardar Resultado como .json</button>, respectivamente (permite elegir cuáles campos guardar) </li>
+ -->
  
     </ul>
    
@@ -154,13 +144,13 @@
      
                 <div id="contenedor-guardar-btns" class="contenedor-guardar-btns display-none">
                     
-                    <button id="guardar-como-csv" class="guardar">Guardar Resultado como .csv</button>
-                    <button id="descargar-csv" class="animationBtn display-none">Descargar CSV</button> 
+                    <!-- <button id="guardar-como-csv" class="guardar">Guardar Resultado como .csv</button>
+                    <button id="descargar-csv" class="animationBtn display-none">Descargar CSV</button>  -->
                     <button id="volver-btn" class="volverBtn invisible">X</button> 
                     
-                    <button id="guardar-como-json" class="guardar">Guardar Resultado como .json</button>
+                   <!--  <button id="guardar-como-json" class="guardar">Guardar Resultado como .json</button>
                    
-                    <button id="descargar-json" class="animationBtn display-none">Descargar JSON</button> 
+                    <button id="descargar-json" class="animationBtn display-none">Descargar JSON</button>  -->
                 </div>
                 <div class="contenedor-switch-btn">
                      <button id="switch-btn" class="switch-btn display-none">X</button>

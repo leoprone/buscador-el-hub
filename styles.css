@@ -300,15 +300,14 @@ body {
 
 
 
+
+
 @keyframes AnimacionCursor{
     0%{
         opacity: 0;
     }
 
-      30%{
-        opacity: 1;
-    }
-      70%{
+      50%{
         opacity: 1;
     }
      100%{
@@ -318,29 +317,37 @@ body {
 
 
    .contenedor-titulo-animado{
-    
+    position: relative;
     width: 270px;
-    height: 50px;
+    height: 46px;
     padding-top: 0px;
-    box-shadow: inset  0 -.1rem 0rem  gray;
+    box-shadow:  0 .1rem 0rem 0 gray;
+    background-color: transparent;
+    margin: 80px auto 0 auto;
     
-    margin: 0 auto;
+    
    }
 
 
+
+ 
    body.dark-mode .contenedor-titulo-animado{
+    background-color: transparent;
+    border-radius: 0;
     box-shadow: inset  0 -.1rem 0rem  var(--btn-celeste-color);
    }
 
-    .buscador-animacion{
+       .buscador-animacion{
         position: relative;
         display: flex;
         justify-content: start;
         width: 240px;
-        height: 40px;
-        color: var(--azul-claro-color);
+        height: 30px;
        
-        margin: 60px auto 20px auto;
+       /*  color: var(--azul-claro-color);
+        */
+       
+        margin: 60px auto 0px auto;
     }
     
     .buscador-animacion>*{
@@ -349,9 +356,10 @@ body {
         letter-spacing: 6px;
         margin: 0px;
          padding-left: 5px; 
+      color: rgb(35, 35, 35);
       
-    
     }
+
 
 
     .aparicion{
@@ -360,23 +368,28 @@ body {
         position: relative;
     }
 
+   
     .aparicion::after{
         content: "";
         position: absolute;
-        top: 0px;
+        top: 6px;
         width: 2px;
-        height: 32px;
-        background-color: var(--azul-oscuro-color);
+        height: 25px;
+        background-color: rgb(221, 217, 217);
         animation: AnimacionCursor .8s linear infinite;
-        box-shadow: 2px 0px .5rem .1rem var(--azul-claro-color);
+        box-shadow: 2px 0px .3rem .05rem var(--buscador-color);
         
     }
 
 
     body.dark-mode .aparicion::after{
+        top: 5px;
+        width: 2px;
+        height: 28px;
          background-color: rgb(27, 27, 27);
          box-shadow: 0px 0px .36rem .05rem var(--btn-celeste-color);
     }
+
 
 /* .buscador-animacion>*{
    
@@ -397,6 +410,55 @@ body.dark-mode .buscador-animacion>*{
    
 
 }
+
+
+
+.contenedor-lupa{
+    width: 20px;
+    height: 40px;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.circulo{
+     width: 20px;
+     height: 20px;
+   background-color: transparent;
+   
+    border: 2px solid black;
+   border-radius: 50%;
+    box-shadow: 3px 3px .6rem .1rem gray, inset 0 0 .7rem var(--btn-celeste-color);
+}
+
+.mango{
+    width: 3px;
+    height: 20px;
+    border-radius: 0 0 3px 3px;
+    background-color: black;
+    transform: rotate(22deg) translateY(-3px);
+    box-shadow: 2px 2px .4rem .05rem rgb(114, 114, 114);
+}
+
+
+body.dark-mode .circulo{
+    border: 2px solid var(--btn-celeste-color);
+}
+
+
+body.dark-mode .mango{
+   background-color: var(--btn-celeste-color);
+}
+
+
+
+
+
+
 
 
 
@@ -2169,6 +2231,7 @@ mark{
 
 
 
+
      
    .contenedor-titulo-animado{
     
@@ -2216,6 +2279,28 @@ mark{
         height: 40px;
        
     }
+
+    .aparicion::after{
+        content: "";
+        position: absolute;
+       top: 10px;
+        width: 3px;
+        height: 32px;
+         background-color: rgb(221, 217, 217);
+        animation: AnimacionCursor .8s linear infinite;
+        box-shadow: 2px 0px .3rem .05rem var(--buscador-color);
+        
+    }
+
+
+    body.dark-mode .aparicion::after{
+        top: 9px;
+        width: 3px;
+        height: 34px;
+         background-color: rgb(27, 27, 27);
+         box-shadow: 0px 0px .36rem .05rem var(--btn-celeste-color);
+    }
+
 
 
 
@@ -2445,6 +2530,7 @@ mark{
 
 
     
+    
    .contenedor-titulo-animado{
     
     width: 470px;
@@ -2481,18 +2567,26 @@ mark{
     
       .aparicion::after{
         
-        top: 7px;
+        top: 10px;
         width: 5px;
-        height: 50px;
-        box-shadow: 0 0 .4rem .05rem var(--azul-claro-color);
+        height: 46px;
+        background-color: rgb(221, 217, 217);
+        animation: AnimacionCursor .8s linear infinite;
+        box-shadow: 2px 0px .3rem .05rem var(--buscador-color);
     }
 
 
     body.dark-mode .aparicion::after{
-       
+        top: 11px;
+        width: 5px;
+        height: 46px;
         box-shadow: 0 0 .4rem .1rem var(--btn-celeste-color);
 
     }
+
+
+
+
 
     .instrucciones{
         width: 70%;
@@ -2609,6 +2703,48 @@ mark{
         height: 180px;
         top: -10px;
     }
+
+
+    
+.contenedor-lupa{
+    width: 35px;
+    height: 70px;
+    top: -15px;
+}
+
+
+.circulo{
+     width: 35px;
+     height: 35px;
+   background-color: transparent;
+   
+    border: 2px solid black;
+   border-radius: 50%;
+    box-shadow: 3px 3px .6rem .1rem gray, inset 0 0 .7rem var(--btn-celeste-color);
+}
+
+.mango{
+    width: 4px;
+    height: 35px;
+    border-radius: 0 0 3px 3px;
+    background-color: black;
+    transform: rotate(22deg) translateY(-3px);
+    box-shadow: 2px 2px .4rem .05rem rgb(114, 114, 114);
+}
+
+
+body.dark-mode .circulo{
+    border: 2px solid var(--btn-celeste-color);
+}
+
+
+body.dark-mode .mango{
+   background-color: var(--btn-celeste-color);
+}
+
+
+
+
 }
 
 

@@ -516,20 +516,20 @@ function deleteRow(id) {
           link.href = URL.createObjectURL(blob);
           link.download = "filtrado.csv"; // Nombre del archivo
           link.style.display = "none";
-          descargarCsv.classList.remove('animacion');
+        /*   descargarCsv.classList.remove('animacion'); */
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);
       
-          descargarCsv.classList.add("display-none");
-        claveOpciones.classList.add("display-none");
+        /*   descargarCsv.classList.add("display-none");
+        claveOpciones.classList.add("display-none"); */
         saveAsCsv.classList.remove("display-none");
-        switchBtn.classList.add("display-none");
+       /*  switchBtn.classList.add("display-none"); */
         
         saveAsCsv.addEventListener("click", ()=>{
                 
-                descargarCsv.classList.remove("display-none");
-                claveOpciones.classList.remove("display-none");
+              /*   descargarCsv.classList.remove("display-none");
+                claveOpciones.classList.remove("display-none"); */
                 saveAsCsv.classList.add("display-none");
         });
          
@@ -537,7 +537,7 @@ function deleteRow(id) {
       }
       
       
-    
+    /* 
       const descargarCsv = document.getElementById('descargar-csv');
     
       descargarCsv.addEventListener("click", ()=>{
@@ -545,7 +545,7 @@ function deleteRow(id) {
            descargarJSONFiltrado('csv');
       });
 
-
+ 
   
       
  
@@ -592,18 +592,18 @@ function deleteRow(id) {
            descargarJSONFiltrado('json');
       });
 
-      
+      */
 
 
     const switchBtn=document.getElementById("switch-btn");
 
     switchBtn.addEventListener("click", ()=>{
-        claveOpciones.classList.add("display-none");
+        /* claveOpciones.classList.add("display-none"); */
         switchBtn.classList.add("display-none");
-        descargarCsv.classList.add("display-none");
+       /*  descargarCsv.classList.add("display-none"); 
         saveAsCsv.classList.remove("display-none");
-        descargarJson.classList.add("display-none");
-        saveAsJson.classList.remove("display-none");
+       descargarJson.classList.add("display-none"); 
+        saveAsJson.classList.remove("display-none");*/
     });
 
 
@@ -740,7 +740,12 @@ function descargarJSONFiltrado(formato) {
 
 // ANIMACIÓN TÍTULO ("BUSCADOR")
        
+const contenedorLupa = document.getElementById("contenedor-lupa");
+
+       
 function animacionTitulo(){
+ contenedorLupa.style.display = "block";
+    
 
     const b = document.querySelector(".b"),
     u = document.querySelector(".u"),
@@ -752,51 +757,52 @@ function animacionTitulo(){
     r = document.querySelector(".r");
 
     setTimeout(()=>{
+      contenedorLupa.style.display = "none";
         b.classList.remove("display-none");
        b.classList.add("aparicion");
-    },2000);
+    },5000);
 
      setTimeout(()=>{
        u.classList.remove("display-none");
        u.classList.add("aparicion");
        b.classList.remove("aparicion");
-    },2500);
+    },5500);
 
      setTimeout(()=>{
        s.classList.remove("display-none");
        s.classList.add("aparicion");
        u.classList.remove("aparicion");
-    },2800);
+    },5800);
 
      setTimeout(()=>{
        c.classList.remove("display-none");
        c.classList.add("aparicion");
        s.classList.remove("aparicion");
-    },4000);
+    },7000);
 
      setTimeout(()=>{
        a.classList.remove("display-none");
        a.classList.add("aparicion");
        c.classList.remove("aparicion");
-    },4800);
+    },7800);
 
      setTimeout(()=>{
        d.classList.remove("display-none");
        d.classList.add("aparicion");
        a.classList.remove("aparicion");
-    },5500);
+    },8500);
 
      setTimeout(()=>{
        o.classList.remove("display-none");
        o.classList.add("aparicion");
        d.classList.remove("aparicion");
-    },6000);
+    },9000);
 
      setTimeout(()=>{
        r.classList.remove("display-none");
        r.classList.add("aparicion");
        o.classList.remove("aparicion");
-    },6200);
+    },9200);
 
      setTimeout(()=>{
         b.classList.add("display-none");
@@ -807,10 +813,10 @@ function animacionTitulo(){
         d.classList.add("display-none");
         o.classList.add("display-none");
         r.classList.add("display-none");
+        
        animacionTitulo();
-    },12000);
-}
-      
+    },15000);
+}   
 let jsonGlobal; // Variable global para almacenar el JSON
 
 /* const fileId = '1mhLUAF-lti-SOKG9VPDgJM_ZgW0xRP-s'; */
@@ -1447,8 +1453,8 @@ function buscar(inputBuscador, dondeBuscar, opciones) {
     verTodoBtn.addEventListener('click', ()=>{
          
          imprimirTodo();
-         saveAsCsv.classList.add("display-none");
-         saveAsJson.classList.add("display-none");
+        /*  saveAsCsv.classList.add("display-none");
+         saveAsJson.classList.add("display-none"); */
     });
 
 
@@ -1488,7 +1494,7 @@ function resaltarTextoSeguro(texto, busqueda) {
       const volverBtn = document.getElementById("volver-btn");
 
      
-/* 
+
       function mostrarContenidoCompleto(objeto, contenedor){
            
             let html = "";
@@ -1500,12 +1506,12 @@ function resaltarTextoSeguro(texto, busqueda) {
             }
            
             contenedor.innerHTML=html;
-            claveOpciones.classList.add("display-none");
+           /*  claveOpciones.classList.add("display-none"); */
             switchBtn.classList.add("display-none");
-            saveAsCsv.classList.remove("display-none");
-            saveAsJson.classList.remove("display-none");
-            descargarCsv.classList.add("display-none");
-            descargarJson.classList.add("display-none");
+          /*   saveAsCsv.classList.remove("display-none");
+            saveAsJson.classList.remove("display-none"); */
+           /*  descargarCsv.classList.add("display-none");
+            descargarJson.classList.add("display-none"); */
             volverBtn.classList.remove("invisible");
             volverBtn.addEventListener("click", ()=>{
                 contenedor.style.display = 'none';
@@ -1516,7 +1522,7 @@ function resaltarTextoSeguro(texto, busqueda) {
 
             
       }
- */
+ /* */
 
 
 
@@ -1532,12 +1538,12 @@ function mostrarContenidoCompleto(objeto, contenedor) {
         contenedor.appendChild(p);
     }
 
-    claveOpciones.classList.add("display-none");
+   /*  claveOpciones.classList.add("display-none"); */
     switchBtn.classList.add("display-none");
-    saveAsCsv.classList.remove("display-none");
+    /*   saveAsCsv.classList.remove("display-none");
     saveAsJson.classList.remove("display-none");
-    descargarCsv.classList.add("display-none");
-    descargarJson.classList.add("display-none");
+  descargarCsv.classList.add("display-none");
+    descargarJson.classList.add("display-none"); */
     volverBtn.classList.remove("invisible");
 
     volverBtn.addEventListener("click", () => {
@@ -1667,8 +1673,8 @@ let fields = [];
              button.classList.remove("animationBtn"); 
              fijarCampos(userJSON);
              document.getElementById("cantidad-resultados").textContent =" ";
-             saveAsCsv.classList.remove("display-none");
-             saveAsJson.classList.remove("display-none");
+          /*    saveAsCsv.classList.remove("display-none");
+             saveAsJson.classList.remove("display-none"); */
           });
       }
       
