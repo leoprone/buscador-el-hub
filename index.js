@@ -820,7 +820,7 @@ function animacionTitulo(){
 let jsonGlobal; // Variable global para almacenar el JSON
 
 /* const fileId = '1mhLUAF-lti-SOKG9VPDgJM_ZgW0xRP-s'; */
-const fileId = '1CTgKQkU1aJdE5siJUAyIz6nxlswJbYWW';
+const fileId = '1AaRLMzFLWBMlPxb89HSdgRZWUCWZnm3c';
 const url = `https://corsproxy.io/?https://drive.google.com/uc?export=download&id=${fileId}`;
 //  1z1JkR3N5oMUET-6X5HCUmj8txy3aavDAebrvpeQg5nk
 document.addEventListener("DOMContentLoaded", cargaDirectamenteCSV);
@@ -2076,4 +2076,5 @@ agregarTerminos.addEventListener("click", ()=>{
      }); 
 
     doc.save("resultados.pdf");
+
   }); */
