@@ -1580,6 +1580,25 @@ function imprimirResultados(resultadoFiltrado, opciones) {
         });
 
         opciones.forEach(opcion => {
+             if(opcion.toLowerCase() === 'web' && item[opcion]){
+                    const a = document.createElement("a");
+                    a.textContent = "ver sitio";
+                    a.href = item[opcion].startsWith("http") ? item[opcion] : "https://" + item[opcion];
+                    a.target = "_blank";
+                    a.classList.add("link");
+                    const h3 = document.createElement("h3"); 
+                    h3.textContent = opcion + ": ";
+                    
+                    h3.appendChild(a);   
+                    
+                    h3.classList.add("vistaResultado");
+                    contenedorResultados.appendChild(h3); 
+                }
+
+
+                 if(opcion.toLowerCase() === 'logo' && item[opcion]){
+                      return;
+                }
             const textoOriginal = item[opcion].Highlighted || item[opcion];
             const nodos = resaltarTextoSeguro(textoOriginal, inputBuscador.value);
 
@@ -2078,3 +2097,4 @@ agregarTerminos.addEventListener("click", ()=>{
     doc.save("resultados.pdf");
 
   }); */
+
