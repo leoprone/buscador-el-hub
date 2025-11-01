@@ -643,7 +643,7 @@ hr{
         padding: 3px;
         margin:  0px auto 5px auto;
         text-align: center;
-        z-index: 30;
+        z-index: 200;
        
         transition: .2s linear;
         
@@ -2755,6 +2755,7 @@ body.dark-mode .mango{
     background-color: var(--btn-celeste-color);
 
 }
+
 
 
 
