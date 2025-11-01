@@ -68,10 +68,17 @@
   height: 2rem;
 }
 
-.back-to-top a img{
+.back-to-top a{
   
-  width: 20px;
-  height: 20px;
+  text-decoration: none;
+  
+}
+
+.back-to-top a .flecha{
+  
+  font-size: 22px;
+  color: gray;
+  transform: rotate(-90deg);
 }
 
 
@@ -170,8 +177,10 @@
   
 }
 
- .back-to-top a img{
-  width: 30px;
-  height: 30px;
- }
+ .back-to-top a .flecha{
+  
+  font-size: 30px;
+ 
+}
+
 
