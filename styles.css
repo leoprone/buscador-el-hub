@@ -1530,6 +1530,19 @@ mark{
    
 
 
+.back-to-top a{
+  
+  text-decoration: none;
+  
+}
+
+.back-to-top a .flecha{
+  
+  font-size: 22px;
+  color: gray;
+  transform: rotate(-90deg);
+}
+
 
 
     
@@ -2490,6 +2503,16 @@ mark{
 }
 
 
+@media screen and (min-width: 768px){
+  
+ .back-to-top a .flecha{
+  
+  font-size: 30px;
+  color: gray;
+  transform: rotate(-90deg);
+}
+}
+
 
 @media screen and (min-width: 1150px){
 
@@ -2773,3 +2796,4 @@ body.dark-mode .mango{
     background-color: var(--btn-celeste-color);
 
 }
+
